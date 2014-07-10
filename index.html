@@ -1,0 +1,132 @@
+<html>
+<head>
+    <title>index</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function validation_login() {
+            if (document.login.username.value == "") {
+                alert("Enter UserName");
+                document.login.username.focus();
+                return false;
+            }
+            else if (document.login.password.value==false){
+                alert("Enter Password");
+                document.login.password.focus();
+                return false;
+            }
+        }
+    </script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+<div class="backwrapper">
+    <nav class="navigation">
+        <div class="searchbox">
+            <nav>
+                <ul>
+                    <li id="login">
+                        <a id="login-trigger" href="#">
+                            Log in <span>&#x25BC;</span>
+                        </a>
+
+                        <div id="login-content">
+                            <form>
+                                <div id="inputs">
+                                    <input id="username" type="email" name="Email" placeholder="Your email address" required>
+                                    <input id="password" type="password" name="Password" placeholder="Password" required>
+                                </div>
+                                <div id="actions">
+                                    <input type="submit" id="submit" value="Log in">
+                                    <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li id="signup">
+                        <a href="">Sign up FREE</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <!--<div class="loginbox">-->
+
+    <!--<input type="button" class="buttondec" value="LOGIN">-->
+    <!--<input type="button" class="buttondec" value="SIGN UP">-->
+    <!--<input type="button" class="buttondec" value="SIGN UP">-->
+
+
+    <!--</div>-->
+</div>
+<div class="wrapper">
+    <div class="box">"Ptotem is a reliable, flexible blogging platform that puts the publisher in control."<br>
+        <a class="linkdec" href="#">Find out more..</a></div>
+    <div class="heading">Latest Popular post</div>
+
+    <div class="latestpost">
+
+        <div class="innerpostbox1"><img
+                src="Zucchini-Oat-Chocoalte-Chunk-Muffins-www.kitchenconfidante.com-1-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+
+
+        <div class="innerpostbox1"><img
+                src="Buffalo-Ranch-Grilled-Potato-Salad-www.kitchenconfidante.com-5-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+        <div class="innerpostbox1"><img src="07-04-14-Five-Little-Things-www.kitchenconfidante.com-1-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+
+        <div class="innerpostbox1"><img
+                src="Zucchini-Oat-Chocoalte-Chunk-Muffins-www.kitchenconfidante.com-1-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+
+
+        <div class="innerpostbox1"><img
+                src="Buffalo-Ranch-Grilled-Potato-Salad-www.kitchenconfidante.com-5-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+        <div class="innerpostbox1"><img src="07-04-14-Five-Little-Things-www.kitchenconfidante.com-1-220x220.jpg">
+
+            <p>Five little things I loved this week: Happy 4th! The 4th of July is here and while we don’t have
+                grandiose plans, it’s always a special day in my heart. It reminds me of the day 15</p></div>
+
+
+    </div>
+
+    <!--<div class="banner"></div>-->
+</div>
+<div class="footer">
+    <div class="innerfooter"></div>
+    <div class="footerbox">
+        Join our monthly newsletter!<br><br>
+        Name:<br>
+        <input type="text"><br>
+        Email:<br>
+        <input type="text"><br>
+        <input type="button" value="Submit">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#login-trigger').click(function(){
+            $(this).next('#login-content').slideToggle();
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+            else $(this).find('span').html('&#x25BC;')
+        })
+    });
+</script>
+</body>
+</html>
